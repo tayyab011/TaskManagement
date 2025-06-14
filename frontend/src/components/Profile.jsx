@@ -5,7 +5,11 @@ import { updateProfileApi } from '../apiRequest/api';
 import { setUser } from '../redux/state-slice/authSlice';
 import { useNavigate } from 'react-router-dom';
 import defaultAvatar from "../assets/sdc.jpg";
+import { setLoading } from '../redux/state-slice/settingSlice';
+import FullscreenLoader from './MasterLayout.jsx/FullscreenLoader';
 const Profile = () => {
+  const { loader } = useSelector((store) => store.settings);
+
   const {user}=useSelector(store=>store.auth)
   const navigate=useNavigate()
   const dispatch=useDispatch()
@@ -31,15 +35,18 @@ const Profile = () => {
   
   const submitHandler = async (e) => {
     e.preventDefault();
+      dispatch(setLoading(true));
     const result = await updateProfileApi( profile);
     if (result) {
       dispatch(setUser(result.user));
     navigate('/profile')
+    dispatch(setLoading(false));
     }
   };
     return (
       <div>
         <div class="flex justify-center items-center h-full  w-full bg-gradient-to-r">
+          {loader ? <FullscreenLoader /> : null}
           <form onSubmit={submitHandler} class="space-y-6">
             <div className="flex justify-center gap-5 my-12">
               <img

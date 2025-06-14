@@ -10,6 +10,7 @@ import { logoutApi } from "../../apiRequest/api";
 import defaultAvatar from "../../assets/sdc.jpg";
 import { useSelector } from 'react-redux';
 const Nav = () => {
+  
   const navigate = useNavigate();
   const logout =async()=>{
    const res= await logoutApi()
