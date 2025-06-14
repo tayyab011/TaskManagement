@@ -22,7 +22,7 @@ const app = express();
 
 // Global Application Middleware
 const corsOption = {
-  origin: "http://localhost:5173",
+  origin: "https://taskmanagement-kdq0.onrender.com",
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization", "Cookie"],
   exposedHeaders: ["Content-Type", "Authorization", "Set-Cookie"],
