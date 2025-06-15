@@ -47,7 +47,7 @@ const Login = () => {
         {loader ? <FullscreenLoader /> : null}
 
         <div class="flex justify-center items-center h-full w-full ">
-          <div class="grid gap-8 bg-black rounded-3xl">
+          <div class="grid gap-8 bg-black rounded-3xl mx-4">
             <section
               id="back-div"
               class="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-300 rounded-3xl"
