@@ -60,9 +60,13 @@ const Completed = () => {
                   <span className="card_title"> {item.title}</span>
                 </div>
                 <hr className="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-500 h-[1px] border-0" />
-                <p className="card_paragraph text-xs">{item.description}</p>
+                <p className="card_paragraph text-xs text-white">
+                  {item.description}
+                </p>
                 <div className="w-full flex justify-evenly">
-                  <div>{new Date(item.createdDate).toLocaleDateString()}</div>
+                  <div className="text-white">
+                    {new Date(item.createdDate).toLocaleDateString()}
+                  </div>
                   <button className="btn btn-xs rounded-full text-primary">
                     {item.status}
                   </button>
