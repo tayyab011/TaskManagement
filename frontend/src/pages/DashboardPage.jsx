@@ -8,7 +8,7 @@ const DashboardPage = () => {
     return (
       <Layout>
         {/*    <FullscreenLoader/> */}
-        <hr />
+       
         <div className='my-12'>
          <Dashboard/>
         </div>

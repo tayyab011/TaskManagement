@@ -185,6 +185,7 @@ const { user } = useSelector(store => store.auth);
           </div>
         </>
       ) : null}
+      <hr className="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-500 h-[1px] border-0" />
     </div>
   );
 };

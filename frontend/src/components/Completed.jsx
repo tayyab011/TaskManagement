@@ -23,7 +23,7 @@ const Completed = () => {
     return (
       <div className="container mx-auto">
         {loader ? <FullscreenLoader /> : null}
-       {/*  <div className=" flex justify-end my-5 items-center gap-2 mr-5 md:mr-0">
+        {/*  <div className=" flex justify-end my-5 items-center gap-2 mr-5 md:mr-0">
           <input
             type="text"
             placeholder="Info"
@@ -45,13 +45,13 @@ const Completed = () => {
                       onClick={() =>
                         navigate(`/update/${item._id}`, { state: item })
                       }
-                      className="cursor-pointer hover:text-cyan-500 hover:text-lg transition-all duration-300"
+                      className="cursor-pointer text-white hover:text-cyan-500 hover:text-lg transition-all duration-300"
                     />
                   </span>
                   <span>
                     <MdDelete
                       onClick={() => deleteAlert(item._id)}
-                      className="cursor-pointer hover:text-red-500 hover:text-lg transition-all duration-300"
+                      className="cursor-pointer text-white hover:text-red-500 hover:text-lg transition-all duration-300"
                     />
                   </span>
                 </div>

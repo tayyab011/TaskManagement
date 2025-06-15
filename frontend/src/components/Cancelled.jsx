@@ -35,40 +35,46 @@ const Cancelled = () => {
             </button>
           </div> */}
           <div className="container mx-auto  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3">
-            {Canceled.length===0? <img className='mx-auto' src={nodata}/>: Canceled.map((item, i) => (
-              <>
-                <div key={i} className="card">
-                  <div className="flex justify-end gap-5">
-                    <span>
-                      <FaEdit
-                        onClick={() =>
-                          navigate(`/update/${item._id}`, { state: item })
-                        }
-                        className="cursor-pointer hover:text-cyan-500 hover:text-lg transition-all duration-300"
-                      />
-                    </span>
-                    <span>
-                      <MdDelete
-                        onClick={() => deleteAlert(item._id)}
-                        className="cursor-pointer hover:text-red-500 hover:text-lg transition-all duration-300"
-                      />
-                    </span>
+            {Canceled.length === 0 ? (
+              <img className="mx-auto" src={nodata} />
+            ) : (
+              Canceled.map((item, i) => (
+                <>
+                  <div key={i} className="card">
+                    <div className="flex justify-end gap-5">
+                      <span>
+                        <FaEdit
+                          onClick={() =>
+                            navigate(`/update/${item._id}`, { state: item })
+                          }
+                          className="cursor-pointer text-white hover:text-cyan-500 hover:text-lg transition-all duration-300"
+                        />
+                      </span>
+                      <span>
+                        <MdDelete
+                          onClick={() => deleteAlert(item._id)}
+                          className="cursor-pointer text-white hover:text-red-500 hover:text-lg transition-all duration-300"
+                        />
+                      </span>
+                    </div>
+                    <div className="card__border" />
+                    <div className="card_title__container">
+                      <span className="card_title">{item.title}</span>
+                    </div>
+                    <hr className="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-500 h-[1px] border-0" />
+                    <p className="card_paragraph text-xs">{item.description}</p>
+                    <div className="w-full flex justify-evenly">
+                      <div>
+                        {new Date(item.createdDate).toLocaleDateString()}
+                      </div>
+                      <button className="btn btn-xs rounded-full text-warning font-bold ">
+                        {item.status}
+                      </button>
+                    </div>
                   </div>
-                  <div className="card__border" />
-                  <div className="card_title__container">
-                    <span className="card_title">{item.title}</span>
-                  </div>
-                  <hr className="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-500 h-[1px] border-0" />
-                  <p className="card_paragraph text-xs">{item.description}</p>
-                  <div className="w-full flex justify-evenly">
-                    <div>{new Date(item.createdDate).toLocaleDateString()}</div>
-                    <button className="btn btn-xs rounded-full text-warning font-bold ">
-                      {item.status}
-                    </button>
-                  </div>
-                </div>
-              </>
-            ))}
+                </>
+              ))
+            )}
           </div>
         </div>
       </div>

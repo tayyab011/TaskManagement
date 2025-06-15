@@ -28,7 +28,7 @@ const Update = () => {
     return (
       <div class="flex justify-center items-center h-full  w-full bg-gradient-to-r py-20">
         {loader ? <FullscreenLoader /> : null}
-        <div class="md:w-1/3 sm:w-1/2 w-2/3  grid gap-8">
+        <div class="md:w-1/3 sm:w-1/2 w-full mx-5  grid gap-8">
           <section class="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-300 rounded-3xl">
             <div class="border-8 border-transparent rounded-xl bg-white dark:bg-gray-900 shadow-xl p-8 m-2">
               <h1 class="md:text-5xl sm:text-3xl text-2xl font-bold text-center cursor-default dark:text-gray-300 text-gray-900">

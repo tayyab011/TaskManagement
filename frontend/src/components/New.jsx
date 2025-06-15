@@ -46,13 +46,13 @@ const New = () => {
                       onClick={() =>
                         navigate(`/update/${item._id}`, { state: item })
                       }
-                      className="cursor-pointer hover:text-cyan-500 hover:text-lg transition-all duration-300"
+                      className="cursor-pointer text-white hover:text-cyan-500 hover:text-lg transition-all duration-300"
                     />
                   </span>
                   <span>
                     <MdDelete
                       onClick={() => deleteAlert(item._id)}
-                      className="cursor-pointer hover:text-red-500 hover:text-lg transition-all duration-300"
+                      className="cursor-pointer text-white hover:text-red-500 hover:text-lg transition-all duration-300"
                     />
                   </span>
                 </div>
