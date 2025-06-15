@@ -28,7 +28,7 @@ e.preventDefault();
     return (
       <div class="flex justify-center items-center h-full  w-full bg-gradient-to-r">
         {loader ? <FullscreenLoader /> : null}
-        <div class="md:w-1/2 sm:w-1/2 w-full mx-5  grid gap-8">
+        <div class="md:w-1/2 sm:w-1/2 w-full bg-black rounded-3xl mx-5  grid gap-8">
           <section
             id="back-div"
             class="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-300 rounded-3xl"

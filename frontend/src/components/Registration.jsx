@@ -51,7 +51,7 @@ if (Isempty(data.email)) {
       <div>
         {loader ? <FullscreenLoader /> : null}
         <div class="flex justify-center items-center h-full w-full bg-gradient-to-r ">
-          <div class="grid gap-8 ">
+          <div class="grid gap-8 bg-black rounded-3xl">
             <section
               id="back-div"
               class="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-300 rounded-2xl"

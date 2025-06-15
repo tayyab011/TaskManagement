@@ -47,7 +47,7 @@ const Profile = () => {
       <div>
         <div class="flex justify-center items-center h-full  w-full bg-gradient-to-r">
           {loader ? <FullscreenLoader /> : null}
-          <form onSubmit={submitHandler} class="space-y-6">
+          <form onSubmit={submitHandler} class="space-y-6 mx-4">
             <div className="flex justify-center gap-5 my-12">
               <img
                 src={profile.photo ? profile.photo : defaultAvatar}
